@@ -1,8 +1,8 @@
 ---
 galaxy_info:
   role_name: openvpn
-  namespace: kyl191
-  author: Kyle Lexmond
+  namespace: kolesaev
+  author: Alexey Kolesaev
   description: OpenVPN playbook for CentOS/Fedora/RHEL/RHEL clones & Ubuntu/Debian
 
   license: MIT

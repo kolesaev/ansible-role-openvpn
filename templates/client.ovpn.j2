@@ -30,12 +30,6 @@ auth-user-pass
 {{ option }}
 {% endfor %}
 
-route-method exe
-route-delay 2
-{% if openvpn_client_register_dns %}
-register-dns
-{% endif %}
-
 {% if tls_auth_required %}
 key-direction 1
 {% endif %}

@@ -76,7 +76,7 @@ These options change how OpenVPN itself works.
 |-----------------------------|--------------|-------------------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | openvpn_client_register_dns | boolean      | true, false       | true                       | Add `register-dns` option to client config (Windows only).                                                                                           |
 | openvpn_client_to_client    | boolean      | true, false       | false                      | Set to true if you want clients to access each other.                                                                                                |
-| openvpn_custom_dns          | list[string] |                   | []                         | List of DNS servers, only applied if `openvpn_set_dns` is set to true                                                                                |
+| openvpn_custom_dns_servers  | list[string] |                   | []                         | List of DNS servers, only applied if `openvpn_set_dns` is set to true                                                                                |
 | openvpn_dualstack           | boolean      |                   | true                       | Whether or not to use a dualstack (IPv4 + v6) socket                                                                                                 |
 | openvpn_keepalive_ping      | int          |                   | 5                          | Set `keepalive` ping interval seconds.                                                                                                               |
 | openvpn_keepalive_timeout   | int          |                   | 30                         | Set `keepalive` timeout seconds                                                                                                                      |
@@ -183,7 +183,7 @@ Does not depend on any other roles
 - hosts: vpn
   gather_facts: true
   roles:
-    - role: kyl191.openvpn
+    - role: kolesaev.openvpn
       openvpn_port: 4300
       openvpn_sync_certs: true
       clients:
@@ -198,3 +198,4 @@ MIT
 
 # Author Information
 Written by Kyle Lexmond
+Modified by Alexey Kolesaev
