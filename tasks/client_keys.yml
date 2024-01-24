@@ -67,9 +67,9 @@
   template:
     src: client.ovpn.j2
     dest: "{{ openvpn_ovpn_dir }}/{{ item.0.item }}-{{ inventory_hostname }}.ovpn"
-    owner: root
-    group: root
-    mode: 0400
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0750
   with_together:
     - "{{ client_certs.results }}"
     - "{{ client_keys.results }}"
